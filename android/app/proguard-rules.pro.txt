@@ -1,0 +1,20 @@
+# Rules for ZEGO SDK (based on your error)
+-keep class com.itgsa.opensdk.** { *; }
+
+# Rules for Jackson/Java Reflection related classes (based on your error)
+-keep class java.beans.ConstructorProperties { *; }
+-keep class java.beans.Transient { *; }
+-keep class org.w3c.dom.bootstrap.DOMImplementationRegistry { *; }
+
+# General Flutter/Dart/Plugins recommended rules
+-keep class io.flutter.app.** { *; }
+-keep class io.flutter.plugin.** { *; }
+-keep class io.flutter.util.** { *; }
+-keep class io.flutter.view.** { *; }
+-keep class io.flutter.** { *; }
+-keep class com.google.firebase.** { *; } # If you use Firebase
+-keep class com.google.android.gms.** { *; } # If you use Google Play Services
+
+-dontwarn com.itgsa.**
+-dontwarn java.beans.**
+-dontwarn org.w3c.dom.bootstrap.**
